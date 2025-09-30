@@ -10,7 +10,8 @@ repos:
                 backend/.gitignore|
                 backend/poetry.lock|
                 backend/pyproject.toml|
-                backend/.pre-commit-config.yaml
+                backend/.pre-commit-config.yaml|
+                .github/workflows/ci.yml
             )$
     -   id: pytest
         name: pytest
