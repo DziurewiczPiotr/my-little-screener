@@ -1,0 +1,18 @@
+repos:
+-   repo: local
+    hooks:
+    -   id: black
+        name: black
+        entry: black
+        language: system
+        exclude: |
+            (?x)^(
+                backend/.gitignore|
+                backend/poetry.lock|
+                backend/pyproject.toml|
+                backend/.pre-commit-config.yaml
+            )$
+    -   id: pytest
+        name: pytest
+        entry: bash -c 'cd backend && poetry run pytest tests'
+        language: system
